@@ -35,7 +35,7 @@ std::vector<std::string> getContent(){
 
 std::vector<std::string> getLogs(){
 
-    //if(executeShell("lastb | tac | sed 1,2d > logs") != 0) throw -1;
+    if(executeShell("lastb | tac | sed 1,2d > logs") != 0) throw -1;
 
     std::vector<std::string> log = getContent();
 

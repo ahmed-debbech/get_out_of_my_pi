@@ -52,6 +52,11 @@ int main(){
         cout << msg.user << endl;
     }*/
 
+    if(attempts.size() == 0){
+        cout << "No attempts yet!" << endl;
+        return -1;
+    }
+
     exposeOnTelegram(attempts);
 
     unordered_map<string, int> ip_store = getIpStore();

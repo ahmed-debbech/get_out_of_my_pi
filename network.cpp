@@ -2,8 +2,8 @@
 #include <thread>
 #include <unistd.h>
 #include <curl/curl.h>
-#include "../rapidjson-master/include/rapidjson/rapidjson.h"
-#include "../rapidjson-master/include/rapidjson/document.h"
+#include "../rapidjson/include/rapidjson/rapidjson.h"
+#include "../rapidjson/include/rapidjson/document.h"
 #include "secrets_loader.h"
 
 using namespace std;
