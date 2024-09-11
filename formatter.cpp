@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <regex>
 
 using namespace std;
 
@@ -31,6 +32,14 @@ std::vector<std::string> splitBySpace(const std::string& str) {
     return finalWords;
 }
 
+bool isValidIPv4(const std::string& ip) {
+    
+    std::regex ipv4Pattern(
+        R"((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$)"
+    );
+
+    return std::regex_match(ip, ipv4Pattern);
+}
 
 vector<Attempt> beautify(vector<string> messages){
     vector<Attempt> attempts;
@@ -38,6 +47,8 @@ vector<Attempt> beautify(vector<string> messages){
     for(string msg : messages){
         vector<string> splitted = splitBySpace(msg);
         
+        if(!isValidIPv4(splitted[2])) continue;
+
         Attempt att;
         att.ip = splitted[2];
         att.user = splitted[0];

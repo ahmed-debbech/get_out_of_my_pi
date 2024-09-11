@@ -44,3 +44,7 @@ std::vector<std::string> getLogs(){
 
     return log;
 }
+
+void systemBan(const std::string ipToBan){
+    executeShell("iptables -I INPUT -s "+ipToBan+" -j DROP");
+}

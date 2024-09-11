@@ -99,3 +99,10 @@ unordered_map<string, int> updateStore(vector<Attempt> atempts, unordered_map<st
     return map;
 }
 
+void banIps(unordered_map<string, int> store){
+    for(auto ip: store){
+        if(ip.second >= 3){
+            systemBan(ip.first);
+        }
+    }
+}

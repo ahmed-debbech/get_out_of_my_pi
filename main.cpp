@@ -57,7 +57,7 @@ int main(){
         return -1;
     }
 
-    exposeOnTelegram(attempts);
+    //exposeOnTelegram(attempts);
 
     unordered_map<string, int> ip_store = getIpStore();
     //for (auto it : ip_store) cout << it.first << " " << it.second << endl;
@@ -66,6 +66,7 @@ int main(){
     //for (auto it : ip_store) cout << it.first << " " << it.second << endl;
 
     //ban more than 3 attemts
-    
+    banIps(ip_store);
+
     return 0;
 }
