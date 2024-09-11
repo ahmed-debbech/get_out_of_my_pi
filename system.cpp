@@ -5,6 +5,7 @@
 #include <vector>
 
 int executeShell(std::string cmd){
+	
     int res = system(cmd.c_str());
     if(res == -1){
         std::cout << "error occured in executeing bash command " << std::endl;
@@ -46,5 +47,8 @@ std::vector<std::string> getLogs(){
 }
 
 void systemBan(const std::string ipToBan){
-    executeShell("iptables -I INPUT -s "+ipToBan+" -j DROP");
+	std::cout << ipToBan << " is getting banned" << std::endl;
+    	if(executeShell("sudo iptables -A INPUT -s "+ipToBan+" -j DROP") == 0){
+		std::cout << "ip: sucess " << std::endl;
+	}
 }

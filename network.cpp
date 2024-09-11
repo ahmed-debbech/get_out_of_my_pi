@@ -86,7 +86,7 @@ void sendTelegram(Attempt a, Flag f){
         cout << s.keys["telegram_url"] << endl;
         curl_easy_setopt(curl, CURLOPT_URL, s.keys["telegram_url"].c_str());
 
-        string message = a.ip + " from "+f.icon+" " + f.country + ", " + f.region + ", "+ f.city + " " + "is trying to access with user "+a.user+" at exactly" + a.when ;
+        string message = a.ip + " from "+f.icon+" " + f.country + ", " + f.region + ", "+ f.city + " " + "is trying to access with user "+a.user+" at exactly " + a.when ;
 
         // Data to be sent in the POST request
         std::string postData = R"({"chat_id" : ")"+s.keys["chat_id"]+R"(", "text":")"+message+R"("})";
