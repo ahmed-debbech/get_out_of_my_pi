@@ -5,8 +5,8 @@ A simple c++ program that runs periodically to detect failed SSH attempts and ex
 
 #### Why?
 
-Discovering
-Learning
+Discovering \
+Learning \
 Fun? 
 
 Also man i am tired of random bots scanning my Pi and brute forcing username + pass to gain access or at least get anything useful over SSH.
@@ -27,7 +27,7 @@ Also man i am tired of random bots scanning my Pi and brute forcing username + p
 * `secrets` NECESSARY FILE that is used as a .env file and it is read by the `secrets_loader.cpp` file into a map `<line0, line1>, <line2, line3>` ... 
 
 #### Ok. How to try it?
-1 - Get the full source code and compile it.
+1 - Get the full source code and compile it. \
 2 - Create a root-level cron that runs the generated executable file.
 
 #### Authors
