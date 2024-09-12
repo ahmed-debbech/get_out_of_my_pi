@@ -9,6 +9,7 @@ Discovering \
 Learning \
 Fun? 
 
+Why i didn't use existing solutions out there? I TOLD YOU it's FUN to recreate things. \
 Also man i am tired of random bots scanning my Pi and brute forcing username + pass to gain access or at least get anything useful over SSH.
 
 #### How?
